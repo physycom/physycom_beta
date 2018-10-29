@@ -1,11 +1,23 @@
-sudo:          false
-language:      node_js
-node_js:
-  - "node"
-install:       npm install
+language: cpp
+
+os:
+  - linux
+
+compiler:
+  - gcc
+
+addons:
+  apt:
+    update: true
+    packages:
+    - nodejs
+    - npm
+
+install:
+  - rm -rf node_modules
+  - npm install
+  - npm install gulp
+
 script:
   - npm test
   - gulp
-cache:
-  directories:
-    - node_modules
