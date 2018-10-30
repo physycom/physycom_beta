@@ -19,4 +19,4 @@ install:
   - npm install gulp
 
 script:
-  - make
+  - make npm_test
