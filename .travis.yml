@@ -17,8 +17,9 @@ install:
   - rm -rf node_modules
   - npm install
   - npm install gulp
-  - alias gulp="/usr/bin/nodejs /home/travis/build/physycom/physycom_beta/node_modules/gulp/bin/gulp.js $@"
+  - which nodejs
+  - ls /home/travis/build/physycom/physycom_beta/node_modules/gulp/bin/gulp.js
 
 script:
   - npm test
-  - gulp
+  - alias gulp="/usr/bin/nodejs /home/travis/build/physycom/physycom_beta/node_modules/gulp/bin/gulp.js $@" && gulp
