@@ -22,4 +22,5 @@ install:
 
 script:
   - npm test
-  - alias gulp="/usr/bin/nodejs /home/travis/build/physycom/physycom_beta/node_modules/gulp/bin/gulp.js $@" && gulp
+  - alias gulp="/usr/bin/nodejs /home/travis/build/physycom/physycom_beta/node_modules/gulp/bin/gulp.js $@"
+  - gulp
